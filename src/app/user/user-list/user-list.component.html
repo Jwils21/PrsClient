@@ -1,0 +1,28 @@
+<div>
+	<table class="table table-sm">
+		<thead>
+			<th>Name</th>
+	        <th>User Name</th>
+	        <th>Email</th>
+	        <th>Phone</th>
+	        <th>Reviewer</th>
+	        <th>Admin</th>
+	        <th>Active</th>
+		</thead>
+		<tbody>
+			<tr *ngFor="let user of users">
+				<td>{{ user.FirstName }} {{ user.LastName }}</td>
+				<td>{{ user.UserName }}</td>
+				<td>{{ user.Email }}</td>
+				<td>{{ user.Phone }}</td>
+				<td>{{ user.IsReviewer }}</td>
+				<td>{{ user.IsAdmin }}</td>
+				<td>{{ user.Active }}</td>
+				<td>
+					<span><a routerLink="/users/detail/{{ user.Id }}">Details</a> | </span>
+					<span><a routerLink="/users/edit/{{ user.Id }}">Edit</a></span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

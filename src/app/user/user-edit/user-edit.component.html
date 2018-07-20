@@ -1,0 +1,48 @@
+<div style="padding: 20px;">
+
+   <div class="form-group">
+    <label for="username">User Name:</label>
+    <input id="username" type="text" class="form-control" placeholder="Enter User Name" required [(ngModel)]="user.UserName">
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input id="password" type="password" class="form-control" placeholder="Enter Password" required [(ngModel)]="user.Password">
+  </div>
+  <div class="form-group">
+    <label for="firstname">First Name:</label>
+    <input id="firstname" type="text" class="form-control" placeholder="Enter First Name" required [(ngModel)]="user.FirstName">
+  </div>
+  <div class="form-group">
+    <label for="lastname">Last Name:</label>
+    <input id="lastname" type="text" class="form-control" placeholder="Enter Last Name" required [(ngModel)]="user.LastName">
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input id="email" type="email" class="form-control" placeholder="Enter Email" required [(ngModel)]="user.Email">
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input id="phone" type="text" class="form-control" placeholder="Enter Phone" required [(ngModel)]="user.Phone">
+  </div>
+  <div class="form-group">
+    <label for="isreviewer">Reviewer:</label>
+    <form action="">
+      <input type="checkbox" name="isreviewer" value=true [(ngModel)]="user.IsReviewer"><br>
+    </form>
+  </div>
+  <div class="form-group">
+    <label for="isadmin">Administrator:</label>
+    <form action="">
+      <input type="checkbox" name="isadmin" value=true [(ngModel)]="user.IsAdmin"><br>
+    </form>
+  </div>
+  <div class="form-group">
+    <label for="active">Active:</label>
+    <form action="">
+      <input type="checkbox" name="active" value=true [(ngModel)]="user.Active"><br>
+    </form>
+  </div>
+
+  <span><button type="button" class="btn btn-warning" (click)="change()">Change</button>   </span>
+  <button type="button" class="btn btn-danger secondbutton" (click)="remove()">Delete</button>
+</div>

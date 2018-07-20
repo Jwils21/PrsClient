@@ -1,0 +1,38 @@
+<div>
+	<table class="table table-sm">
+		<tr>
+			<td>First Name</td>
+			<td>{{ user.FirstName }} <td>
+		</tr>
+		<tr>
+			<td>Last Name</td>
+			<td>{{ user.LastName }} <td>
+		</tr>
+		<tr>
+			<td>User Name</td>
+			<td>{{ user.UserName }}</td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td>{{ user.Email }}</td>
+		</tr>
+		<tr>
+			<td>Phone</td>
+			<td>{{ user.Phone }}</td>
+		</tr>
+		<tr>
+			<td>Reviewer</td>
+			<td>{{ user.IsReviewer }}</td>
+		</tr>
+		<tr>
+			<td>Admin</td>
+			<td>{{ user.IsAdmin }}</td>
+		</tr>
+		<tr>
+			<td>Active</td>
+			<td>{{ user.Active }}</td>
+		</tr>
+	</table>
+	<span><a routerLink="/users/detail/{{ user.Id }}">Details</a> | </span>
+	<span><a routerLink="/users/edit/{{ user.Id }}">Edit</a></span>
+</div>

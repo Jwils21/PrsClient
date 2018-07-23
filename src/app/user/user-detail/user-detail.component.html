@@ -1,9 +1,9 @@
+<div>
+  <br>
+    <h4>{{ user.FirstName }}'s Profile</h4>
+  <br>
+</div>
 <div class="maindiv">
-	<br>
-	<div>
-		<h3>{{ user.FirstName }}'s profile</h3>
-		<br>
-	</div>
 	<table class="table table-sm">
 		<tr>
 			<td>First Name</td>
@@ -27,15 +27,15 @@
 		</tr>
 		<tr>
 			<td>Reviewer</td>
-			<td>{{ user.IsReviewer }}</td>
+			<td>{{ user.IsReviewer | bool }}</td>
 		</tr>
 		<tr>
 			<td>Admin</td>
-			<td>{{ user.IsAdmin }}</td>
+			<td>{{ user.IsAdmin | bool }}</td>
 		</tr>
 		<tr>
 			<td>Active</td>
-			<td>{{ user.Active }}</td>
+			<td>{{ user.Active | bool }}</td>
 		</tr>
 	</table>
 	<span><a class="btn btn-warning" routerLink="/users/edit/{{ user.Id }}">Edit</a> | </span>

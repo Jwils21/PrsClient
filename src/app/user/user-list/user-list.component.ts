@@ -13,16 +13,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UserListComponent implements OnInit {
 
   users: User[];
-  YNadmin: string;
-  YNreviewer: string;
-  YNactive: string;
-
-  YNval(user: User): boolean {
-    if (user.IsAdmin ? this.YNadmin = "Yes": this.YNadmin = "No")
-    if (user.IsReviewer ? this.YNreviewer = "Yes": this.YNreviewer = "No")
-    if (user.Active ? this.YNactive = "Yes": this.YNactive = "No")
-    return true;
-  }
 
   constructor(private usersvc: UserService,
               private route: ActivatedRoute,

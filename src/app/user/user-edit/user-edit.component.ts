@@ -13,10 +13,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UserEditComponent implements OnInit {
 
   user: User = new User();
-  YNisAdmin: string;
-  YNactive: string;
-  YNisReviewer: string;
-
 
    remove(): void {
     this.usersvc.remove(this.user)

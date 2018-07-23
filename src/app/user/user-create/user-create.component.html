@@ -1,43 +1,49 @@
+<div>
+  <br>
+    <h4>Create User</h4>
+  <br>
+</div>
+
 <form>
   <div class="form-group row">
     <label for="username" class="col-sm-2 col-form-label">User Name</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="username" placeholder="Enter User Name" required [(ngModel)]="user.UserName">
+      <input type="text" class="form-control" name="username" id="username" placeholder="Enter User Name" required [(ngModel)]="user.UserName">
     </div>
   </div>
   <div class="form-group row">
     <label for="password" class="col-sm-2 col-form-label">Password</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="password" placeholder="Enter Password" required [(ngModel)]="user.Password">
+      <input type="password" class="form-control" name="password" id="password" placeholder="Enter Password" required [(ngModel)]="user.Password">
     </div>
   </div>
   <div class="form-group row">
     <label for="firstname" class="col-sm-2 col-form-label">First Name</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="firstname" placeholder="Enter First Name" required [(ngModel)]="user.FirstName">
+      <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Enter First Name" required [(ngModel)]="user.FirstName">
     </div>
   </div>
   <div class="form-group row">
     <label for="lastname" class="col-sm-2 col-form-label">Last Name</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="lastname" placeholder="Enter Last Name" required [(ngModel)]="user.LastName">
+      <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Enter Last Name" required [(ngModel)]="user.LastName">
     </div>
   </div>
   <div class="form-group row">
     <label for="email" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="email" placeholder="Enter Email" required [(ngModel)]="user.Email">
+      <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email" required [(ngModel)]="user.Email">
     </div>
   </div>
   <div class="form-group row">
     <label for="phone" class="col-sm-2 col-form-label">Phone</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="phone" placeholder="Enter Phone" required [(ngModel)]="user.Phone">
+      <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter Phone" required [(ngModel)]="user.Phone">
     </div>
   </div>
     <div class="form-group row">
       <label class="col-sm-2 col-form-label" for="isreviewer">Reviewer</label>
-      <select [(ngModel)]="user.IsReviewer" class="custom-select col-sm-10" id="isreviewer">
+      <select [(ngModel)]="user.IsReviewer" class="custom-select col-sm-2" name="isreviewer" id="isreviewer">
         <option selected>Choose...</option>
         <option value="true">Yes</option>
         <option value="false">No</option>
@@ -46,7 +52,7 @@
   <div>
     <div class="form-group row">
       <label class="col-sm-2 col-form-label" for="isadmin">Admin</label>
-      <select [(ngModel)]="user.IsAdmin" class="custom-select col-sm-10" id="isadmin">
+      <select [(ngModel)]="user.IsAdmin" class="custom-select col-sm-2" name="isadmin" id="isadmin">
         <option selected>Choose...</option>
         <option value="true">Yes</option>
         <option value="false">No</option>
@@ -56,7 +62,7 @@
   <div>
     <div class="form-group row">
       <label class="col-sm-2 col-form-label" for="active">Active</label>
-      <select [(ngModel)]="user.Active" class="custom-select col-sm-10" id="active">
+      <select [(ngModel)]="user.Active" class="custom-select col-sm-2" name="active" id="active">
         <option selected>Yes</option>
         <option value="true">Yes</option>
         <option value="false">No</option>
@@ -65,7 +71,7 @@
   </div>
   <div class="form-group row">
     <div class="col-sm-10">
-      <span><button type="button" class="btn btn-warning" (click)="create()">Create</button> | </span>
+      <span><button type="button" class="btn btn-success" (click)="create()">Create</button> | </span>
       <button type="button" class="btn btn-danger secondbutton" (click)="cancel()">Cancel</button>
     </div>
   </div>

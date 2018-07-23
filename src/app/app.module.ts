@@ -11,7 +11,8 @@ import { UserEditComponent } from '@user/user-edit/user-edit.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component'; 
+import { AboutComponent } from './about/about.component';
+import { BoolPipe } from './utility/bool.pipe'; 
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AboutComponent } from './about/about.component';
     UserEditComponent,
     MenuComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    BoolPipe
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,7 @@
+<div>
+	<br>
+	<h2>Users</h2>
+<div>
 <div class="container">
 	<span><a class="btn btn-success createbtn" routerLink="/users/create">Create User</a></span>
 	<table class="table table-sm">
@@ -17,9 +21,9 @@
 				<td>{{ user.UserName }}</td>
 				<td>{{ user.Email }}</td>
 				<td>{{ user.Phone }}</td>
-				<td *ngIf="YNval(user)"> {{ YNreviewer }}</td>
-				<td>{{ YNadmin }}</td>
-				<td>{{ YNactive }}</td>
+				<td> {{ user.IsReviewer | bool }}</td>
+				<td>{{ user.IsAdmin | bool }}</td>
+				<td>{{ user.Active | bool }}</td>
 				<td>
 					<span><a routerLink="/users/detail/{{ user.Id }}">Details</a> | </span>
 					<span><a routerLink="/users/edit/{{ user.Id }}">Edit</a></span>

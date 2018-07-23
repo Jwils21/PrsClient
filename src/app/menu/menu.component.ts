@@ -12,6 +12,7 @@ export class MenuComponent implements OnInit {
   menudata = [
   	{ href: "/users/list", display: "User"},
     { href: "/vendors/list", display: "Vendor"},
+    { href: "/products/list", display: "Product"},
   	{ href: "/about", display: "About"}
   ]
 

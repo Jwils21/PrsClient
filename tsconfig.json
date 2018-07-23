@@ -5,6 +5,7 @@
     "paths": {
       "@user/*": ["app/user/*"],
       "@vendor/*": ["app/vendor/*"],
+      "@product/*": ["app/product/*"],
       "@app/*": ["app/*"]
     },
     "outDir": "./dist/out-tsc",

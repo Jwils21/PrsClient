@@ -22,7 +22,7 @@ export class UserCreateComponent implements OnInit {
   }
 
   cancel(): void{
-  	
+  	this.router.navigateByUrl("users/list")
   }
 
   constructor(private usersvc: UserService,

@@ -12,7 +12,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { BoolPipe } from './utility/bool.pipe'; 
+import { BoolPipe } from './utility/bool.pipe';
+import { VendorListComponent } from './vendor/vendor-list/vendor-list.component';
+import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
+import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
+import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductEditComponent } from './product/product-edit/product-edit.component';
+import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+import { ProductCreateComponent } from './product/product-create/product-create.component'; 
 
 
 @NgModule({
@@ -25,7 +33,15 @@ import { BoolPipe } from './utility/bool.pipe';
     MenuComponent,
     HomeComponent,
     AboutComponent,
-    BoolPipe
+    BoolPipe,
+    VendorListComponent,
+    VendorEditComponent,
+    VendorDetailComponent,
+    VendorCreateComponent,
+    ProductListComponent,
+    ProductEditComponent,
+    ProductDetailComponent,
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,

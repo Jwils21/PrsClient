@@ -1,0 +1,47 @@
+<div>
+  <br>
+    <h4>{{ vendor.Name }}'s Profile</h4>
+  <br>
+</div>
+<div class="maindiv">
+	<table class="table table-sm">
+		<tr>
+			<td>Code</td>
+			<td>{{ vendor.Code }}</td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td>{{ vendor.Name }}</td>
+		</tr>
+		<tr>
+			<td>Address</td>
+			<td>{{ vendor.Address }}</td>
+		</tr>
+		<tr>
+			<td>City</td>
+			<td>{{ vendor.City }}</td>
+		</tr>
+		<tr>
+			<td>State</td>
+			<td>{{ vendor.State }}</td>
+		</tr>
+		<tr>
+			<td>Zip</td>
+			<td>{{ vendor.Zip }}</td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td>{{ vendor.Email }}</td>
+		</tr>
+		<tr>
+			<td>Pre Approved</td>
+			<td>{{ vendor.IsPreApproved | bool }}</td>
+		</tr>
+		<tr>
+			<td>Active</td>
+			<td>{{ vendor.Active | bool }}</td>
+		</tr>
+	</table>
+	<span><a class="btn btn-warning" routerLink="/vendors/edit/{{ vendor.Id }}">Edit</a> | </span>
+	<button (click)="remove()" class="btn btn-danger">Remove</button>
+</div>

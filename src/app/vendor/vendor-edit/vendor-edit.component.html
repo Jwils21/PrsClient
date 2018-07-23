@@ -1,0 +1,75 @@
+<div>
+  <br>
+    <h4>Edit {{ vendor.Name }}'s Profile</h4>
+  <br>
+</div>
+<form>
+  <div class="form-group row">
+    <label for="vendorcode" class="col-sm-2 col-form-label">Vendor Code</label>
+    <div class="col-sm-10">
+      <input [(ngModel)]="vendor.Code" type="text" class="form-control" name="vendorcode" id="vendorcode" placeholder="Enter Vendor Code" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="vendorname" class="col-sm-2 col-form-label">Vendor Name</label>
+    <div class="col-sm-10">
+      <input [(ngModel)]="vendor.Name" type="text" class="form-control" name="vendorname" id="vendorname" placeholder="Enter Vendor Name" >
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="address" class="col-sm-2 col-form-label">Adress</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="address"  id="address" placeholder="Enter Address" required [(ngModel)]="vendor.Address">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="city" class="col-sm-2 col-form-label">City</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="city" id="city" placeholder="Enter City" required [(ngModel)]="vendor.City">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="state" class="col-sm-2 col-form-label">State</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="state" id="state" placeholder="Enter State" required [(ngModel)]="vendor.State">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="zip" class="col-sm-2 col-form-label">Zip</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="zip" id="zip" placeholder="Enter Zip" required [(ngModel)]="vendor.Zip">
+    </div>
+  </div>
+    <div class="form-group row">
+    <label for="email" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email" required [(ngModel)]="vendor.Email">
+    </div>
+  </div>
+  <div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="ispreapproved">Pre Approved</label>
+      <select [(ngModel)]="vendor.IsPreApproved" class="custom-select col-sm-2" name="ispreapproved" id="ispreapproved">
+        <option selected></option>
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+    </div>
+  </div>
+  <div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="active">Active</label>
+      <select [(ngModel)]="vendor.Active" class="custom-select col-sm-2" name="active" id="active">
+        <option selected></option>
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <span><button type="button" class="btn btn-success" (click)="change()">Change</button> | </span>
+      <button type="button" class="btn btn-danger secondbutton" (click)="remove()">Remove</button>
+    </div>
+  </div>
+</form>

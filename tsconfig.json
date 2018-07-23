@@ -4,6 +4,7 @@
     "baseUrl": "src",
     "paths": {
       "@user/*": ["app/user/*"],
+      "@vendor/*": ["app/vendor/*"],
       "@app/*": ["app/*"]
     },
     "outDir": "./dist/out-tsc",

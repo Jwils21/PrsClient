@@ -9,7 +9,9 @@ import { UserDetailComponent } from '@user/user-detail/user-detail.component';
 import { UserCreateComponent } from '@user/user-create/user-create.component';
 import { UserEditComponent } from '@user/user-edit/user-edit.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MenuComponent } from './menu/menu.component'; 
+import { MenuComponent } from './menu/menu.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component'; 
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { MenuComponent } from './menu/menu.component';
     UserDetailComponent,
     UserCreateComponent,
     UserEditComponent,
-    MenuComponent
+    MenuComponent,
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

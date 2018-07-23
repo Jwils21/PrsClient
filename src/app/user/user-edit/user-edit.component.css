@@ -1,20 +1,23 @@
-input[type=checkbox] {
-  transform: scale(1.5);
-  margin: 5px;
-}
-input[type=checkbox]:hover {
-  transform: scale(2.0);
-}
-.form-control {
-	width: 400px;
+
+form{
+	width: 60%;
+	margin: auto;
 }
 .form-control:hover {
   transform: scale(1.01);
   border-color: #4CAF50;
 }
-label {
+.custom-select:hover {
+  transform: scale(1.01);
+  border-color: #4CAF50;
+}
+/*label {
 	float: left;
 	clear: both;
 	margin: 5px;
 	font-weight: bold;
-}
+}*/
+/*.container{
+	margin: auto;
+    width: 80%;
+}*/

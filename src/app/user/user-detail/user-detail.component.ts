@@ -12,6 +12,25 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UserDetailComponent implements OnInit {
 
   user: User = new User();
+  YNadmin: string;
+  YNreviewer: string;
+  YNactive: string;
+
+  YNval(user: User): boolean {
+    if (user.IsAdmin ? this.YNadmin = "Yes": this.YNadmin = "No")
+    if (user.IsReviewer ? this.YNreviewer = "Yes": this.YNreviewer = "No")
+    if (user.Active ? this.YNactive = "Yes": this.YNactive = "No")
+    return true;
+  }
+
+
+  remove(): void {
+  	this.usersvc.remove(this.user)
+  		.subscribe(resp => {
+  			console.log(resp);
+  			this.router.navigateByUrl("/users/list")
+  		});
+  }
 
   constructor(private usersvc: UserService, 
               private router: Router,

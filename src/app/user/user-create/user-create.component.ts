@@ -11,7 +11,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class UserCreateComponent implements OnInit {
 
-  
+  user: User = new User();
+
+  create(): void {
+    this.usersvc.create(this.user)
+      .subscribe(resp => {
+        console.log(resp);
+        this.router.navigateByUrl("users/list")
+      });
+  }
+
+  cancel(): void{
+  	
+  }
 
   constructor(private usersvc: UserService,
   			  private route: ActivatedRoute,

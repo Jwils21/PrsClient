@@ -1,12 +1,17 @@
-<div>
+<div class="maindiv">
+	<br>
+	<div>
+		<h3>{{ user.FirstName }}'s profile</h3>
+		<br>
+	</div>
 	<table class="table table-sm">
 		<tr>
 			<td>First Name</td>
-			<td>{{ user.FirstName }} <td>
+			<td>{{ user.FirstName }}</td>
 		</tr>
 		<tr>
 			<td>Last Name</td>
-			<td>{{ user.LastName }} <td>
+			<td>{{ user.LastName }}</td>
 		</tr>
 		<tr>
 			<td>User Name</td>
@@ -33,6 +38,6 @@
 			<td>{{ user.Active }}</td>
 		</tr>
 	</table>
-	<span><a routerLink="/users/detail/{{ user.Id }}">Details</a> | </span>
-	<span><a routerLink="/users/edit/{{ user.Id }}">Edit</a></span>
+	<span><a class="btn btn-warning" routerLink="/users/edit/{{ user.Id }}">Edit</a> | </span>
+	<button (click)="remove()" class="btn btn-danger">Remove</button>
 </div>

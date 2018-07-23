@@ -13,6 +13,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UserEditComponent implements OnInit {
 
   user: User = new User();
+  YNisAdmin: string;
+  YNactive: string;
+  YNisReviewer: string;
+
+
+   remove(): void {
+    this.usersvc.remove(this.user)
+      .subscribe(resp => {
+        console.log(resp);
+        this.router.navigateByUrl("/users/list")
+      });
+  }
 
   change(): void {
     this.usersvc.change(this.user)
@@ -34,7 +46,7 @@ export class UserEditComponent implements OnInit {
 		.subscribe(resp => {
 			this.user = resp.Data;
 			console.log(resp);
-
     });
+    
   }
 }

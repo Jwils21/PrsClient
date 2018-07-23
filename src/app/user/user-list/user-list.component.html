@@ -1,4 +1,5 @@
-<div>
+<div class="container">
+	<span><a class="btn btn-success createbtn" routerLink="/users/create">Create User</a></span>
 	<table class="table table-sm">
 		<thead>
 			<th>Name</th>
@@ -8,6 +9,7 @@
 	        <th>Reviewer</th>
 	        <th>Admin</th>
 	        <th>Active</th>
+	        <th>Action</th>
 		</thead>
 		<tbody>
 			<tr *ngFor="let user of users">
@@ -15,9 +17,9 @@
 				<td>{{ user.UserName }}</td>
 				<td>{{ user.Email }}</td>
 				<td>{{ user.Phone }}</td>
-				<td>{{ user.IsReviewer }}</td>
-				<td>{{ user.IsAdmin }}</td>
-				<td>{{ user.Active }}</td>
+				<td *ngIf="YNval(user)"> {{ YNreviewer }}</td>
+				<td>{{ YNadmin }}</td>
+				<td>{{ YNactive }}</td>
 				<td>
 					<span><a routerLink="/users/detail/{{ user.Id }}">Details</a> | </span>
 					<span><a routerLink="/users/edit/{{ user.Id }}">Edit</a></span>

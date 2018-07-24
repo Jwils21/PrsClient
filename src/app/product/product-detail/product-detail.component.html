@@ -1,9 +1,9 @@
-<div>
+<div *ngIf="product">
   <br>
     <h4>{{ product.Name }}'s Information</h4>
   <br>
 </div>
-<div class="maindiv">
+<div class="maindiv" *ngIf="product">
 	<table class="table table-sm">
 		<tr>
 			<td>Name</td>

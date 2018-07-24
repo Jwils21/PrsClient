@@ -1,0 +1,43 @@
+<div class="maindiv" *ngIf="purchaserequest">
+	<div>
+	  <br>
+	    <h4>{{ purchaserequest.User.FirstName }}'s Request Information</h4>
+	  <br>
+	</div>
+	<table class="table table-sm">
+		<tr>
+			<td>User</td>
+			<td>{{ purchaserequest.User.FirstName }} {{ purchaserequest.User.LastName }}</td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td>{{ purchaserequest.Description }}</td>
+		</tr>
+		<tr>
+			<td>Justification</td>
+			<td>{{ purchaserequest.Justification }}</td>
+		</tr>
+		<tr>
+			<td>Total</td>
+			<td>{{ purchaserequest.Total }}</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>{{ purchaserequest.Status }}</td>
+		</tr>
+		<tr>
+			<td>Delivery Mode</td>
+			<td>{{ purchaserequest.DeliveryMode }}</td>
+		</tr>
+		<tr>
+			<td>Reason For Rejection</td>
+			<td>{{ purchaserequest.ReasonForRejection }}</td>
+		</tr>		
+		<tr>
+			<td>Active</td>
+			<td>{{ purchaserequest.Active | bool }}</td>
+		</tr>
+	</table>
+	<span><a class="btn btn-warning" routerLink="/purchaserequests/edit/{{ purchaserequest.Id }}">Edit</a> | </span>
+	<button (click)="remove()" class="btn btn-danger">Remove</button>
+</div>

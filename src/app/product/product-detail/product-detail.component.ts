@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductDetailComponent implements OnInit {
 
-  product: Product = new Product();
+  product: Product;
 
   remove(): void {
     this.productsvc.remove(this.product)

@@ -10,9 +10,10 @@ import { Menu } from '@app/menu/menu';
 export class MenuComponent implements OnInit {
 
   menudata = [
-  	{ href: "/users/list", display: "User"},
-    { href: "/vendors/list", display: "Vendor"},
-    { href: "/products/list", display: "Product"},
+  	{ href: "/users/list", display: "Users"},
+    { href: "/vendors/list", display: "Vendors"},
+    { href: "/products/list", display: "Products"},
+    { href: "/purchaserequests/list", display: "Requests"},
   	{ href: "/about", display: "About"}
   ]
 

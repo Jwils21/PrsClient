@@ -20,7 +20,17 @@ import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.comp
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
-import { ProductCreateComponent } from './product/product-create/product-create.component'; 
+import { ProductCreateComponent } from './product/product-create/product-create.component';
+import { PurchaserequestListComponent } from './purchaserequest/purchaserequest-list/purchaserequest-list.component';
+import { PurchaserequestEditComponent } from './purchaserequest/purchaserequest-edit/purchaserequest-edit.component';
+import { PurchaserequestDetailComponent } from './purchaserequest/purchaserequest-detail/purchaserequest-detail.component';
+import { PurchaserequestCreateComponent } from './purchaserequest/purchaserequest-create/purchaserequest-create.component';
+import { PurchaserequestlineitemListComponent } from './purchaserequestlineitem/purchaserequestlineitem-list/purchaserequestlineitem-list.component';
+import { PurchaserequestlineitemEditComponent } from './purchaserequestlineitem/purchaserequestlineitem-edit/purchaserequestlineitem-edit.component';
+import { PurchaserequestlineitemDetailComponent } from './purchaserequestlineitem/purchaserequestlineitem-detail/purchaserequestlineitem-detail.component';
+import { PurchaserequestlineitemCreateComponent } from './purchaserequestlineitem/purchaserequestlineitem-create/purchaserequestlineitem-create.component';
+import { PurchaserequestReviewComponent } from './purchaserequest/purchaserequest-review/purchaserequest-review.component';
+import { UserLoginComponent } from './user/user-login/user-login.component'; 
 
 
 @NgModule({
@@ -41,7 +51,17 @@ import { ProductCreateComponent } from './product/product-create/product-create.
     ProductListComponent,
     ProductEditComponent,
     ProductDetailComponent,
-    ProductCreateComponent
+    ProductCreateComponent,
+    PurchaserequestListComponent,
+    PurchaserequestEditComponent,
+    PurchaserequestDetailComponent,
+    PurchaserequestCreateComponent,
+    PurchaserequestlineitemListComponent,
+    PurchaserequestlineitemEditComponent,
+    PurchaserequestlineitemDetailComponent,
+    PurchaserequestlineitemCreateComponent,
+    PurchaserequestReviewComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,

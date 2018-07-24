@@ -24,17 +24,16 @@ export class ProductCreateComponent implements OnInit {
   }
 
    cancel(): void{
-  	this.router.navigateByUrl("vendors/list");
+  	this.router.navigateByUrl("products/list");
   }
 
 
   constructor(private productsvc: ProductService,
-  			  private vendorsvc: VendorService,
+  			      private vendorsvc: VendorService,
               private route: ActivatedRoute,
               private router: Router) { }
 
   ngOnInit() {
-  let id = this.route.snapshot.params.id;
 
 	//store vendors to choose the Id that correlates with it.
 	this.vendorsvc.list()

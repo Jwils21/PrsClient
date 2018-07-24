@@ -37,7 +37,7 @@
   <div>
     <div class="form-group row">
       <label class="col-sm-2 col-form-label" for="vendorid">Vendor</label>
-      <select [(ngModel)]="product.Vendor" class="custom-select col-sm-5" name="vendorid" id="vendorid">
+      <select [(ngModel)]="product.VendorId" class="custom-select col-sm-5" name="vendorid" id="vendorid">
         <option *ngFor="let vendor of vendors" value="{{ vendor.Id }}">{{ vendor.Name }}</option>
       </select>
     </div>

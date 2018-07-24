@@ -1,0 +1,37 @@
+<div id="listHead">
+	<br>
+	<h2>Purchase Requests</h2>
+</div>
+<div class="container">
+	<span><a id="createLnk" class="btn btn-success createbtn" routerLink="/purchaserequests/create">Create Purchase Request</a></span>
+	<table class="table table-sm table-hover">
+		<thead>
+			<th>User</th>
+	        <th>Description</th>
+	        <th>Justification</th>
+	        <th>Total</th>
+	        <th>Status</th>
+	        <th>Delivery Mode</th>
+	        <th>Reason For Rejection</th>
+	        <th>Active</th>
+	        <th>Action</th>
+		</thead>
+		<tbody>
+			<tr *ngFor="let purchaserequest of purchaserequests">
+				<td>{{ purchaserequest.User.FirstName }} {{ purchaserequest.User.LastName }}</td>
+				<td>{{ purchaserequest.Description }}</td>
+				<td>{{ purchaserequest.Justification }}</td>
+				<td>{{ purchaserequest.Total }}</td>
+				<td>{{ purchaserequest.Status }}</td>
+				<td>{{ purchaserequest.DeliveryMode }}</td>
+				<td>{{ purchaserequest.ReasonForRejection }}</td>
+				<td>{{ purchaserequest.Active | bool }}</td>
+				<td>
+					<span><a routerLink="/purchaserequests/detail/{{ purchaserequest.Id }}">Details</a> | </span>
+					<span><a routerLink="/purchaserequests/edit/{{ purchaserequest.Id }}">Edit</a> | </span>
+					<span><a routerLink="/purchaserequestlineitems/list/{{ purchaserequest.Id }}">Lines</a></span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

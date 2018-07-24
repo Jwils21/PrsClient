@@ -14,7 +14,7 @@ export class VendorCreateComponent implements OnInit {
   vendor: Vendor = new Vendor();
 
   create(): void {
-    this.usersvc.create(this.vendor)
+    this.vendorsvc.create(this.vendor)
       .subscribe(resp => {
         console.log(resp);
         this.router.navigateByUrl("vendors/list");
@@ -25,7 +25,7 @@ export class VendorCreateComponent implements OnInit {
   	this.router.navigateByUrl("vendors/list");
   }
 
-  constructor(private usersvc: VendorService,
+  constructor(private vendorsvc: VendorService,
   			  private route: ActivatedRoute,
   			  private router: Router) { }
 

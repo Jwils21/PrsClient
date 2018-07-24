@@ -1,3 +1,34 @@
-<p>
-  product-list works!
-</p>
+<div id="listHead">
+	<br>
+	<h2>Products</h2>
+</div>
+<div class="container">
+	<span><a id="createLnk" class="btn btn-success createbtn" routerLink="/products/create">Create Product</a></span>
+	<table class="table table-sm table-hover">
+		<thead>
+			<th>Name</th>
+	        <th>Price</th>
+	        <th>Unit</th>
+	        <th>Vendor</th>
+	        <th>Part Number</th>
+	        <th>Photo Path</th>
+	        <th>Active</th>
+	        <th>Action</th>
+		</thead>
+		<tbody>
+			<tr *ngFor="let product of products">
+				<td>{{ product.Name }}</td>
+				<td>{{ product.Price }}</td>
+				<td>{{ product.Unit }}</td>
+				<td>{{ product.Vendor.Name }}</td>
+				<td>{{ product.PartNumber }}</td>
+				<td>{{ product.PhotoPath }}</td>
+				<td>{{ product.Active | bool }}</td>
+				<td>
+					<span><a routerLink="/products/detail/{{ product.Id }}">Details</a> | </span>
+					<span><a routerLink="/products/edit/{{ product.Id }}">Edit</a></span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

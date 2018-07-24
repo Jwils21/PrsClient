@@ -1,3 +1,39 @@
-<p>
-  product-detail works!
-</p>
+<div>
+  <br>
+    <h4>{{ product.Name }}'s Information</h4>
+  <br>
+</div>
+<div class="maindiv">
+	<table class="table table-sm">
+		<tr>
+			<td>Name</td>
+			<td>{{ product.Name }}</td>
+		</tr>
+		<tr>
+			<td>Vendor</td>
+			<td>{{ product.Vendor.Name }}</td>
+		</tr>
+		<tr>
+			<td>Price</td>
+			<td>{{ product.Price }}</td>
+		</tr>
+		<tr>
+			<td>Unit Qty</td>
+			<td>{{ product.Unit }}</td>
+		</tr>
+		<tr>
+			<td>Part Number</td>
+			<td>{{ product.PartNumber }}</td>
+		</tr>
+		<tr>
+			<td>Photo Path</td>
+			<td>{{ product.PhotoPath }}</td>
+		</tr>
+		<tr>
+			<td>Active</td>
+			<td>{{ product.Active | bool }}</td>
+		</tr>
+	</table>
+	<span><a class="btn btn-warning" routerLink="/products/edit/{{ product.Id }}">Edit</a> | </span>
+	<button (click)="remove()" class="btn btn-danger">Remove</button>
+</div>

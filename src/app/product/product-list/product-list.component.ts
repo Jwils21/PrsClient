@@ -13,13 +13,13 @@ export class ProductListComponent implements OnInit {
 
   products: Product[];
 
-  constructor(private vendorsvc: ProductService,
+  constructor(private productsvc: ProductService,
               private route: ActivatedRoute,
               private router: Router) { }
 
   ngOnInit() {
   //List the users
-  this.vendorsvc.list()
+  this.productsvc.list()
   	.subscribe(resp => {
   		this.products = resp.Data;
   		console.log(resp);

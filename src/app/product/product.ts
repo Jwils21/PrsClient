@@ -4,7 +4,7 @@ export class Product {
 	VendorId: number;
 	PartNumber: string;
 	Name: string;
-	Price: string;
+	Price: number;
 	Unit: string;
 	PhotoPath: string;
 	Active: boolean;

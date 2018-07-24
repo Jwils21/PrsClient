@@ -15,6 +15,9 @@ import { VendorDetailComponent } from '@vendor/vendor-detail/vendor-detail.compo
 import { VendorCreateComponent } from '@vendor/vendor-create/vendor-create.component';
 
 import { ProductListComponent } from '@product/product-list/product-list.component';
+import { ProductDetailComponent } from '@product/product-detail/product-detail.component';
+import { ProductEditComponent } from '@product/product-edit/product-edit.component';
+import { ProductCreateComponent } from '@product/product-create/product-create.component';
 
 
 const routes: Routes = [
@@ -33,6 +36,9 @@ const routes: Routes = [
  {path: 'vendors/list', component: VendorListComponent},
 
  {path: 'products/list', component: ProductListComponent},
+ {path: 'products/detail/:id', component: ProductDetailComponent},
+ {path: 'products/edit/:id', component: ProductEditComponent},
+ {path: 'products/create', component: ProductCreateComponent},
 
  {path: '**', component: UserEditComponent}
 ];

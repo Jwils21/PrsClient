@@ -1,3 +1,4 @@
+<app-menu></app-menu>
 <div class="maindiv" *ngIf="purchaserequest">
 	<div>
 	  <br>
@@ -39,5 +40,6 @@
 		</tr>
 	</table>
 	<span><a class="btn btn-warning" routerLink="/purchaserequests/edit/{{ purchaserequest.Id }}">Edit</a> | </span>
-	<button (click)="remove()" class="btn btn-danger">Remove</button>
+	<span><button (click)="remove()" class="btn btn-danger">Remove</button> | </span>
+	<span><button (click)="review()" class="btn btn-success">Review</button></span>
 </div>

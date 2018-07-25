@@ -1,3 +1,18 @@
-<p>
-  user-login works!
-</p>
+<div id="margindiv"></div>
+<div class="jumbotron" id="jtron">
+	<form>
+	  <div id="centerdiv">
+	  	<img src="assets/logo.png">
+	  	<h4>Please Sign In</h4>
+	  </div>
+	  <div class="form-group">
+	    <label for="username">User Name</label>
+	    <input [(ngModel)]="user.UserName" type="text" class="form-control" id="username" name="username" placeholder="Enter User Name">
+	  </div>
+	  <div class="form-group">
+	    <label for="password">Password</label>
+	    <input [(ngModel)]="user.Password" type="password" class="form-control" id="password" name="password" placeholder="Password">
+	  </div>
+	  <button (click)="login()" class="btn btn-primary">Submit</button>
+	</form>
+</div>

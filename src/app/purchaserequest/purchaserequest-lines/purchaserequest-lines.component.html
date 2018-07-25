@@ -1,0 +1,26 @@
+<app-menu></app-menu>
+<div *ngIf="purchaserequest.User" id="listHead">
+	<br>
+	<h2>Lines for {{ purchaserequest.User.FirstName }}' Purchase Request</h2>
+</div>
+<div class="container">
+	<table class="table table-sm table-bordered">
+		<thead>
+			<th>User</th>
+	        <th>Description</th>
+	        <th>Total</th>
+	        <th>Status</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{ purchaserequest.User.FirstName }} {{ purchaserequest.User.LastName }}</td>
+				<td>{{ purchaserequest.Description }}</td>
+				<td>{{ purchaserequest.Total }}</td>
+				<td>{{ purchaserequest.Status }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+
+
+</div>

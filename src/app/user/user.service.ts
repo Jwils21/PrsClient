@@ -3,6 +3,8 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { User } from "@user/user";
 import { JsonResponse } from "@app/JsonResponse";
+import { SystemService } from "@system/system.service";
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +12,10 @@ import { JsonResponse } from "@app/JsonResponse";
 export class UserService {
 
   url = "http://localhost:50798/Users/";
+
+  auth(username: string, password: string): Observable<JsonResponse>{
+    return this.http.get(this.url + "Authenticate/" + username + "/" + password ) as Observable<JsonResponse>;
+  } 
 
   list(): Observable<JsonResponse>{
   	return this.http.get(this.url + "List") as Observable<JsonResponse>;

@@ -29,8 +29,10 @@ import { PurchaserequestlineitemListComponent } from './purchaserequestlineitem/
 import { PurchaserequestlineitemEditComponent } from './purchaserequestlineitem/purchaserequestlineitem-edit/purchaserequestlineitem-edit.component';
 import { PurchaserequestlineitemDetailComponent } from './purchaserequestlineitem/purchaserequestlineitem-detail/purchaserequestlineitem-detail.component';
 import { PurchaserequestlineitemCreateComponent } from './purchaserequestlineitem/purchaserequestlineitem-create/purchaserequestlineitem-create.component';
-import { PurchaserequestReviewComponent } from './purchaserequest/purchaserequest-review/purchaserequest-review.component';
-import { UserLoginComponent } from './user/user-login/user-login.component'; 
+import { UserLoginComponent } from './user/user-login/user-login.component';
+import { PurchaserequestLinesComponent } from './purchaserequest/purchaserequest-lines/purchaserequest-lines.component';
+import { PurchaserequestReviewListComponent } from './purchaserequest/purchaserequest-review-list/purchaserequest-review-list.component';
+import { PurchaserequestReviewDetailComponent } from './purchaserequest/purchaserequest-review-detail/purchaserequest-review-detail.component'; 
 
 
 @NgModule({
@@ -60,8 +62,10 @@ import { UserLoginComponent } from './user/user-login/user-login.component';
     PurchaserequestlineitemEditComponent,
     PurchaserequestlineitemDetailComponent,
     PurchaserequestlineitemCreateComponent,
-    PurchaserequestReviewComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    PurchaserequestLinesComponent,
+    PurchaserequestReviewListComponent,
+    PurchaserequestReviewDetailComponent
   ],
   imports: [
     BrowserModule,

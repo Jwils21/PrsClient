@@ -1,7 +1,10 @@
+import { User } from "@user/user"
+
 export class PurchaseRequest {
 
 	Id: number;
 	UserId: number;
+	User: User;
 	Description: string;
 	Justification: string;
 	DeliveryMode: string;
@@ -13,5 +16,8 @@ export class PurchaseRequest {
 	constructor() {
 		this.Id= 0;
 		this.Active = true;
+		this.Status = "New"
+		this.DeliveryMode = "Pickup"
+		this.Total = 0;
 	}
 }

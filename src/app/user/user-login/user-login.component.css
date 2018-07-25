@@ -1,0 +1,38 @@
+#centerdiv{
+	margin: auto;
+
+	text-align: center;
+}
+#jtron{
+	margin: auto;
+	width: 35%;
+}
+#margindiv{
+	margin: 30px 0;
+}
+img{
+	width: 200px;
+	height: 200px;
+}
+h4{
+	margin: auto;
+	
+}
+form{
+	margin: auto;
+	width: 60%;
+}
+select{
+	width: 5px;
+}
+.form-control:hover {
+  transform: scale(1.01);
+  border-color: #4CAF50;
+}
+.custom-select:hover {
+  transform: scale(1.01);
+  border-color: #4CAF50;
+}
+.custom-select {
+  margin-left: 15px;
+}

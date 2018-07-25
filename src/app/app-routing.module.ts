@@ -24,7 +24,9 @@ import { PurchaserequestListComponent } from '@purchaserequest/purchaserequest-l
 import { PurchaserequestDetailComponent } from '@purchaserequest/purchaserequest-detail/purchaserequest-detail.component';
 import { PurchaserequestEditComponent } from '@purchaserequest/purchaserequest-edit/purchaserequest-edit.component';
 import { PurchaserequestCreateComponent } from '@purchaserequest/purchaserequest-create/purchaserequest-create.component';
-import { PurchaserequestReviewComponent } from '@purchaserequest/purchaserequest-review/purchaserequest-review.component';
+import { PurchaserequestLinesComponent } from '@purchaserequest/purchaserequest-lines/purchaserequest-lines.component';
+import { PurchaserequestReviewDetailComponent } from '@purchaserequest/purchaserequest-review-detail/purchaserequest-review-detail.component';
+import { PurchaserequestReviewListComponent } from '@purchaserequest/purchaserequest-review-list/purchaserequest-review-list.component';
 
 import { PurchaserequestlineitemListComponent } from '@purchaserequestlineitem/purchaserequestlineitem-list/purchaserequestlineitem-list.component';
 import { PurchaserequestlineitemDetailComponent } from '@purchaserequestlineitem/purchaserequestlineitem-detail/purchaserequestlineitem-detail.component';
@@ -56,15 +58,17 @@ const routes: Routes = [
  {path: 'purchaserequests/list', component: PurchaserequestListComponent},
  {path: 'purchaserequests/detail/:id', component: PurchaserequestDetailComponent},
  {path: 'purchaserequests/edit/:id', component: PurchaserequestEditComponent},
+ {path: 'purchaserequests/lines/:prid', component: PurchaserequestLinesComponent},
  {path: 'purchaserequests/create', component: PurchaserequestCreateComponent},
- {path: 'purchaserequests/review', component: PurchaserequestReviewComponent},
+ {path: 'purchaserequests/review/list', component: PurchaserequestReviewListComponent},
+ {path: 'purchaserequests/review/detail', component: PurchaserequestReviewDetailComponent},
 
  {path: 'purchaserequestlineitems/list', component: PurchaserequestlineitemListComponent},
  {path: 'purchaserequestlineitems/detail/:id', component: PurchaserequestlineitemDetailComponent},
  {path: 'purchaserequestlineitems/edit/:id', component: PurchaserequestlineitemEditComponent},
  {path: 'purchaserequestlineitems/create', component: PurchaserequestlineitemCreateComponent},
 
- {path: '**', component: UserEditComponent}
+ {path: '**', component: HomeComponent}
 ];
 
 @NgModule({

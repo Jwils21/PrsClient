@@ -5,32 +5,26 @@ import { JsonResponse } from '@app/JsonResponse';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-purchaserequest-detail',
-  templateUrl: './purchaserequest-detail.component.html',
-  styleUrls: ['./purchaserequest-detail.component.css']
+  selector: 'app-purchaserequest-lines',
+  templateUrl: './purchaserequest-lines.component.html',
+  styleUrls: ['./purchaserequest-lines.component.css']
 })
-export class PurchaserequestDetailComponent implements OnInit {
+export class PurchaserequestLinesComponent implements OnInit {
 
   purchaserequest: PurchaseRequest;
-
-  remove(): void {
-    this.purchreqsvc.remove(this.purchaserequest)
-      .subscribe(resp => {
-        console.log(resp);
-        this.router.navigateByUrl("/purchaserequests/list")
-      });
-  }
 
   constructor(private purchreqsvc: PurchaserequestService,
               private route: ActivatedRoute,
               private router: Router) { }
 
   ngOnInit() {
-  	let id = this.route.snapshot.params.id;
+  	let id = this.route.snapshot.params.prid;
+  	console.log(id)
   	this.purchreqsvc.get(id)
     	.subscribe(resp => {
     		this.purchaserequest = resp.Data;
     		console.log(resp);
+    		console.log("Purchase Request..." + this.purchaserequest);
     });
   }
 

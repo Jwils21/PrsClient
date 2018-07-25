@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { PurchaserequestService } from '@purchaserequest/purchaserequest.service';
 import { PurchaseRequest } from '@purchaserequest/purchaserequest';
-import { UserService } from '@user/user.service';
-import { User } from '@user/user';
 import { JsonResponse } from '@app/JsonResponse';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SystemService } from "@system/system.service";
+import { User } from '@user/user';
 
 @Component({
   selector: 'app-purchaserequest-create',
@@ -13,7 +13,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class PurchaserequestCreateComponent implements OnInit {
 
-  users: User[];
   purchaserequest: PurchaseRequest = new PurchaseRequest();
 
   create(): void {
@@ -29,18 +28,14 @@ export class PurchaserequestCreateComponent implements OnInit {
   }
 
   constructor(private purchreqsvc: PurchaserequestService,
-  			      private usersvc: UserService,
+              private syssvc: SystemService,
               private route: ActivatedRoute,
               private router: Router) { }
 
   ngOnInit() {
-
-	//store vendors to choose the Id that correlates with it.
-	this.usersvc.list()
-  	.subscribe(resp => {
-  		this.users = resp.Data;
-  		console.log(resp);
-  	})
+      this.purchaserequest.UserId = this.syssvc.loggedinuser.Id;
+      this.purchaserequest.User = this.syssvc.loggedinuser
+      console.log(this.purchaserequest);
   }
 
 }

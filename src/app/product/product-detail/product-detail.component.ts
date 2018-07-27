@@ -3,6 +3,8 @@ import { ProductService } from '@product/product.service';
 import { Product } from '@product/product';
 import { JsonResponse } from '@app/JsonResponse';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SystemService } from '@system/system.service';
+import { User } from '@user/user';
 
 @Component({
   selector: 'app-product-detail',
@@ -12,6 +14,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ProductDetailComponent implements OnInit {
 
   product: Product;
+  currUser: User;
 
   remove(): void {
     this.productsvc.remove(this.product)
@@ -22,12 +25,14 @@ export class ProductDetailComponent implements OnInit {
   }
 
   constructor(private productsvc: ProductService,
+              private syssvc: SystemService,
               private route: ActivatedRoute,
               private router: Router) { }
 
   ngOnInit() {
+  this.currUser = this.syssvc.loggedinuser;
+  
   let id = this.route.snapshot.params.id;
-
 	this.productsvc.get(id)
 		.subscribe(resp => {
 			this.product = resp.Data;

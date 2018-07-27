@@ -43,6 +43,7 @@
 			<td>{{ vendor.Active | bool }}</td>
 		</tr>
 	</table>
-	<span><a class="btn btn-warning" routerLink="/vendors/edit/{{ vendor.Id }}">Edit</a> | </span>
-	<button (click)="remove()" class="btn btn-danger">Remove</button>
+	<span *ngIf="currUser.IsAdmin"><a class="btn btn-warning" routerLink="/vendors/edit/{{ vendor.Id }}">Edit</a> | </span>
+	<span *ngIf="currUser.IsAdmin"><button (click)="remove()" class="btn btn-danger">Remove</button> | </span>
+	<span><a class="btn btn-secondary" routerLink="/vendors/list">Back</a></span>
 </div>

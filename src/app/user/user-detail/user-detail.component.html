@@ -39,6 +39,7 @@
 			<td>{{ user.Active | bool }}</td>
 		</tr>
 	</table>
-	<span><a class="btn btn-warning" routerLink="/users/edit/{{ user.Id }}">Edit</a> | </span>
-	<button (click)="remove()" class="btn btn-danger">Remove</button>
+		<span *ngIf="currUser.IsAdmin"><a class="btn btn-warning" routerLink="/users/edit/{{ user.Id }}">Edit</a> | </span>
+		<span *ngIf="currUser.IsAdmin"><button (click)="remove()" class="btn btn-danger">Remove</button> | </span>
+		<span><a class="btn btn-secondary" routerLink="/users/list">Back</a></span>
 </div>

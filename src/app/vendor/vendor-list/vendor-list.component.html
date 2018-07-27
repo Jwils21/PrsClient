@@ -2,9 +2,10 @@
 <div id="listHead">
 	<br>
 	<h2>Vendors</h2>
+	<br *ngIf="!currUser.IsAdmin">
 </div>
 <div class="container">
-	<span><a id="createLnk" class="btn btn-success createbtn" routerLink="/vendors/create">Create Vendor</a></span>
+	<span *ngIf="currUser.IsAdmin"><a id="createLnk" class="btn btn-success createbtn" routerLink="/vendors/create">Create Vendor</a></span>
 	<table class="table table-sm table-hover">
 		<thead>
 			<th>Code</th>
@@ -30,8 +31,8 @@
 				<td>{{ vendor.IsPreApproved | bool }}</td>
 				<td>{{ vendor.Active | bool }}</td>
 				<td>
-					<span><a routerLink="/vendors/detail/{{ vendor.Id }}">Details</a> | </span>
-					<span><a routerLink="/vendors/edit/{{ vendor.Id }}">Edit</a></span>
+					<span><a routerLink="/vendors/detail/{{ vendor.Id }}">Details</a></span>
+					<span *ngIf="currUser.IsAdmin"> | <a routerLink="/vendors/edit/{{ vendor.Id }}">Edit</a></span>
 				</td>
 			</tr>
 		</tbody>

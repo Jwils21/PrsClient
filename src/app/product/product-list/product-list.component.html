@@ -2,9 +2,10 @@
 <div id="listHead">
 	<br>
 	<h2>Products</h2>
+	<br *ngIf="!currUser.IsAdmin">
 </div>
 <div class="container">
-	<span><a id="createLnk" class="btn btn-success createbtn" routerLink="/products/create">Create Product</a></span>
+	<span *ngIf="currUser.IsAdmin"><a id="createLnk" class="btn btn-success createbtn" routerLink="/products/create">Create Product</a></span>
 	<table class="table table-sm table-hover">
 		<thead>
 			<th>Name</th>
@@ -26,8 +27,8 @@
 				<td>{{ product.PhotoPath }}</td>
 				<td>{{ product.Active | bool }}</td>
 				<td>
-					<span><a routerLink="/products/detail/{{ product.Id }}">Details</a> | </span>
-					<span><a routerLink="/products/edit/{{ product.Id }}">Edit</a></span>
+					<span><a routerLink="/products/detail/{{ product.Id }}">Details</a></span>
+					<span *ngIf="currUser.IsAdmin"> | <a routerLink="/products/edit/{{ product.Id }}">Edit</a></span>
 				</td>
 			</tr>
 		</tbody>

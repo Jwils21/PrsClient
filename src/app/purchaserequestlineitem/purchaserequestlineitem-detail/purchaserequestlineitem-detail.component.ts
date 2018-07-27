@@ -37,7 +37,7 @@ export class PurchaserequestlineitemDetailComponent implements OnInit {
   }
 
   constructor(private purchreqsvc: PurchaserequestService,
-  			  private prlisvc: PurchaserequestlineitemService,
+  			      private prlisvc: PurchaserequestlineitemService,
               private route: ActivatedRoute,
               private router: Router) { }
 

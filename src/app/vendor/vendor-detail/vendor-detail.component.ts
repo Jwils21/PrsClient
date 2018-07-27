@@ -3,6 +3,8 @@ import { VendorService } from '@vendor/vendor.service';
 import { Vendor } from '@vendor/vendor';
 import { JsonResponse } from '@app/JsonResponse';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SystemService } from '@system/system.service';
+import { User } from '@user/user';
 
 @Component({
   selector: 'app-vendor-detail',
@@ -10,7 +12,10 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./vendor-detail.component.css']
 })
 export class VendorDetailComponent implements OnInit {
+  
   vendor: Vendor = new Vendor();
+  currUser: User;
+
 
    remove(): void {
     this.vendorsvc.remove(this.vendor)
@@ -21,12 +26,14 @@ export class VendorDetailComponent implements OnInit {
   }
 
   constructor(private vendorsvc: VendorService, 
+              private syssvc: SystemService,
               private router: Router,
               private route: ActivatedRoute) { }
 
   ngOnInit() {
+  this.currUser = this.syssvc.loggedinuser;
+  
   let id = this.route.snapshot.params.id;
-
 	this.vendorsvc.get(id)
 		.subscribe(resp => {
 			this.vendor = resp.Data;

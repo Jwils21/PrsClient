@@ -3,6 +3,7 @@ import { UserService } from '@user/user.service';
 import { User } from '@user/user';
 import { JsonResponse } from '@app/JsonResponse';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SystemService } from '@system/system.service';
 
 @Component({
   selector: 'app-user-detail',
@@ -12,6 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class UserDetailComponent implements OnInit {
 
   user: User = new User();
+  currUser: User;
   
   remove(): void {
   	this.usersvc.remove(this.user)
@@ -21,17 +23,18 @@ export class UserDetailComponent implements OnInit {
   		});
   }
 
-  constructor(private usersvc: UserService, 
+  constructor(private usersvc: UserService,
+              private syssvc: SystemService, 
               private router: Router,
               private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.currUser = this.syssvc.loggedinuser;
     let id = this.route.snapshot.params.id;
-
-	this.usersvc.get(id)
-		.subscribe(resp => {
-			this.user = resp.Data;
-			console.log(resp);
+	  this.usersvc.get(id)
+  		.subscribe(resp => {
+  			this.user = resp.Data;
+  			console.log(resp);
 
     });
   }

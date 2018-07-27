@@ -2,7 +2,8 @@
 <div class="container">
 	<br>
 	<h2>Users</h2>
-	<span><a class="btn btn-success createbtn" routerLink="/users/create">Create User</a></span>
+	<br *ngIf="!currUser.IsAdmin">
+	<span *ngIf="currUser.IsAdmin"><a class="btn btn-success createbtn" routerLink="/users/create">Create User</a></span>
 	<table class="table table-sm table-hover">
 		<thead>
 			<th>Name</th>
@@ -24,8 +25,8 @@
 				<td>{{ user.IsAdmin | bool }}</td>
 				<td>{{ user.Active | bool }}</td>
 				<td>
-					<span><a routerLink="/users/detail/{{ user.Id }}">Details</a> | </span>
-					<span><a routerLink="/users/edit/{{ user.Id }}">Edit</a></span>
+					<span><a routerLink="/users/detail/{{ user.Id }}">Details</a></span>
+					<span *ngIf="currUser.IsAdmin"> | <a id="edit" routerLink="/users/edit/{{ user.Id }}">Edit</a></span>
 				</td>
 			</tr>
 		</tbody>

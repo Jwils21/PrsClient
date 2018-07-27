@@ -35,6 +35,7 @@
 			<td>{{ product.Active | bool }}</td>
 		</tr>
 	</table>
-	<span><a class="btn btn-warning" routerLink="/products/edit/{{ product.Id }}">Edit</a> | </span>
-	<button (click)="remove()" class="btn btn-danger">Remove</button>
+	<span *ngIf="currUser.IsAdmin"><a class="btn btn-warning" routerLink="/products/edit/{{ product.Id }}">Edit</a> | </span>
+	<span *ngIf="currUser.IsAdmin"><button (click)="remove()" class="btn btn-danger">Remove</button> | </span>
+	<span><a class="btn btn-secondary" routerLink="/products/list">Back</a></span>
 </div>

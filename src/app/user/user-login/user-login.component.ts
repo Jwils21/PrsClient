@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { SystemService } from '@system/system.service';
 import { UserService } from '@user/user.service';
 import { User } from '@user/user';
 import { JsonResponse } from '@app/JsonResponse';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SystemService } from "@system/system.service";
 
 
 @Component({

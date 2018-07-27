@@ -1,3 +1,51 @@
-<p>
-  purchaserequestlineitem-detail works!
-</p>
+<app-menu></app-menu>
+<div *ngIf="purchaserequest.User" class="container">
+	<div id="listHead">
+		<br>
+		<h4>Details for {{ purchaserequest.User.FirstName }}'s Purchase Request Line Item: {{ purchaseRequestLineItem.Product.Name }}</h4>
+		<br>
+	</div>
+	<table id="prtbl" class="table table-sm table-bordered thead-dark">
+		<thead>
+			<th>User</th>
+	        <th>Description</th>
+	        <th>Total</th>
+	        <th>Status</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{ purchaserequest.User.FirstName }} {{ purchaserequest.User.LastName }}</td>
+				<td>{{ purchaserequest.Description }}</td>
+				<td>{{ purchaserequest.Total }}</td>
+				<td>{{ purchaserequest.Status }}</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="maindiv">
+		<br>
+		<h5>Line Item</h5>
+		<br>
+		<table class="table table-sm" *ngIf="purchaseRequestLineItem.Product">
+			<tr>
+				<td>Product</td>
+				<td>{{ purchaseRequestLineItem.Product.Name }}</td>
+			</tr>
+			<tr>
+				<td>Quantity</td>
+				<td>{{ purchaseRequestLineItem.Quantity }}</td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td>{{ purchaseRequestLineItem.Product.Price | currency  }}</td>
+			</tr>
+			<tr>
+				<td>Line Total</td>
+				<td>{{ purchaseRequestLineItem.Product.Price * purchaseRequestLineItem.Quantity | currency }}</td>
+			</tr>
+		</table>
+		<span><a class="btn btn-warning"  routerLink="/purchaserequestlineitems/edit/{{ purchaseRequestLineItem.Id }}">Edit</a> | </span>
+		<span><button (click)="remove()" class="btn btn-danger">Remove</button> | </span>
+		<a class="btn btn-secondary"  routerLink="/purchaserequests/lines/{{ purchaseRequestLineItem.Id }}">Back</a>
+	</div>
+
+</div>

@@ -1,0 +1,22 @@
+.maindiv{
+	margin: auto;
+	width: 50%;
+}
+h4{
+	margin: auto;
+	text-align: center;
+}
+.createbtn{
+	margin: 10px 0px;
+}
+.container{
+	margin: auto;
+    width: 90%;
+}
+h5{
+	margin: auto;
+	text-align: center;
+}
+#prtbl{
+	background-color: #F9F9F9;
+}

@@ -16,6 +16,7 @@ export class PurchaserequestCreateComponent implements OnInit {
   purchaserequest: PurchaseRequest = new PurchaseRequest();
 
   create(): void {
+    this.purchaserequest.User=null;
     this.purchreqsvc.create(this.purchaserequest)
       .subscribe(resp => {
         console.log(resp);
@@ -34,8 +35,9 @@ export class PurchaserequestCreateComponent implements OnInit {
 
   ngOnInit() {
       this.purchaserequest.UserId = this.syssvc.loggedinuser.Id;
-      this.purchaserequest.User = this.syssvc.loggedinuser
+      this.purchaserequest.User = this.syssvc.loggedinuser;
       console.log(this.purchaserequest);
+      console.log(this.purchaserequest.User);
   }
 
 }

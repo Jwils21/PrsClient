@@ -1,0 +1,25 @@
+form{
+	margin: auto;
+	width: 60%;
+}
+h4{
+	margin: auto;
+	text-align: center;
+}
+select{
+	width: 5px;
+}
+.form-control:hover {
+  transform: scale(1.01);
+  border-color: #4CAF50;
+}
+.custom-select:hover {
+  transform: scale(1.01);
+  border-color: #4CAF50;
+}
+.custom-select {
+  margin-left: 15px;
+}
+#prtbl{
+	background-color: #F9F9F9;
+}

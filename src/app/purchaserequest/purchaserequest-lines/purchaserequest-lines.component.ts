@@ -19,7 +19,6 @@ export class PurchaserequestLinesComponent implements OnInit {
 
   ngOnInit() {
   	let id = this.route.snapshot.params.prid;
-  	console.log(id)
   	this.purchreqsvc.get(id)
     	.subscribe(resp => {
     		this.purchaserequest = resp.Data;

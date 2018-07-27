@@ -17,6 +17,7 @@ export class PurchaserequestEditComponent implements OnInit {
   users: User[];
 
   remove(): void {
+    this.purchaserequest.User = null;
     this.purchreqsvc.remove(this.purchaserequest)
       .subscribe(resp => {
         console.log(resp);
@@ -25,12 +26,18 @@ export class PurchaserequestEditComponent implements OnInit {
   }
 
   change(): void {
+    this.purchaserequest.User = null;
     this.purchreqsvc.change(this.purchaserequest)
       .subscribe(resp => {
         console.log(resp);
         //navigate back to the product list page
         this.router.navigateByUrl('purchaserequests/list')
       });
+  }
+
+  cancel(): void {
+        //navigate back to the product list page
+        this.router.navigateByUrl('purchaserequests/list')
   }
 
   constructor(private purchreqsvc: PurchaserequestService,
@@ -50,7 +57,7 @@ export class PurchaserequestEditComponent implements OnInit {
   this.usersvc.list()
   	.subscribe(resp => {
   		this.users = resp.Data;
-  		console.log(resp);
+  		console.log("Usr Data" + resp);
   	})
   }
 
